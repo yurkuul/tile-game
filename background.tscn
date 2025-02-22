@@ -1,0 +1,68 @@
+[gd_scene load_steps=12 format=3 uid="uid://dxua5jne87yp"]
+
+[ext_resource type="Script" path="res://background.gd" id="1_e7dc3"]
+[ext_resource type="Texture2D" uid="uid://drw40ujyqot7l" path="res://Cat Tiles/image1x1.png" id="1_ht2rr"]
+[ext_resource type="Texture2D" uid="uid://07qdt2u1b104" path="res://Cat Tiles/image1x2.png" id="2_vigu8"]
+[ext_resource type="Texture2D" uid="uid://b6hcbo63va3yr" path="res://Cat Tiles/image1x3.png" id="3_qpjdd"]
+[ext_resource type="Texture2D" uid="uid://di25yitwnwoj1" path="res://Cat Tiles/image2x1.png" id="4_msk5n"]
+[ext_resource type="Texture2D" uid="uid://cbbng7b1bw0sj" path="res://Cat Tiles/image2x2.png" id="5_2254f"]
+[ext_resource type="Texture2D" uid="uid://dtvw5phjokn3q" path="res://Cat Tiles/image2x3.png" id="6_d4grn"]
+[ext_resource type="Texture2D" uid="uid://bt6657oqamufk" path="res://Cat Tiles/image3x1.png" id="7_rjpsk"]
+[ext_resource type="Texture2D" uid="uid://dw507kq1urlq8" path="res://Cat Tiles/image3x2.png" id="8_6n1gr"]
+[ext_resource type="Texture2D" uid="uid://chs72wbiwhsvp" path="res://Cat Tiles/empty.png" id="9_3qh8r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4n7c4"]
+size = Vector2(800, 800)
+
+[node name="background" type="Area2D"]
+script = ExtResource("1_e7dc3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(400, 400)
+shape = SubResource("RectangleShape2D_4n7c4")
+
+[node name="Tile1" type="Sprite2D" parent="."]
+position = Vector2(133, 133)
+texture = ExtResource("1_ht2rr")
+
+[node name="Tile2" type="Sprite2D" parent="."]
+position = Vector2(399, 133)
+texture = ExtResource("4_msk5n")
+
+[node name="Tile3" type="Sprite2D" parent="."]
+position = Vector2(665, 133)
+texture = ExtResource("7_rjpsk")
+
+[node name="Tile4" type="Sprite2D" parent="."]
+position = Vector2(133, 399)
+texture = ExtResource("2_vigu8")
+
+[node name="Tile5" type="Sprite2D" parent="."]
+position = Vector2(399, 399)
+texture = ExtResource("5_2254f")
+
+[node name="Tile6" type="Sprite2D" parent="."]
+position = Vector2(665, 399)
+texture = ExtResource("8_6n1gr")
+
+[node name="Tile7" type="Sprite2D" parent="."]
+position = Vector2(133, 665)
+texture = ExtResource("3_qpjdd")
+
+[node name="Tile8" type="Sprite2D" parent="."]
+position = Vector2(399, 665)
+texture = ExtResource("6_d4grn")
+
+[node name="Tile9" type="Sprite2D" parent="."]
+position = Vector2(665, 665)
+texture = ExtResource("9_3qh8r")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 180.0
+offset_top = 335.0
+offset_right = 603.0
+offset_bottom = 472.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "You Win!"
